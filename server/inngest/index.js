@@ -20,7 +20,7 @@ const syncUserCreation = inngest.createFunction(
         })
     }
 )
-
+//acc changed new acc added
 //Inngest Function to delete user data to a database
 const syncUserDeletion = inngest.createFunction(
     {id: 'delete-user-with-clerk'},
