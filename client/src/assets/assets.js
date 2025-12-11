@@ -13,24 +13,24 @@ export const assets = {
 export const dummyUsers = [
     {
         "id": "user_1",
-        "name": "Alex Smith",
-        "email": "alexsmith@example.com",
+        "name": "harsh prasad",
+        "email": "harshprasad@example.com",
         "image": profile_img_a,
         "createdAt": "2025-10-06T11:04:03.485Z",
         "updatedAt": "2025-10-06T11:04:03.485Z"
     },
     {
         "id": "user_2",
-        "name": "John Warrel",
-        "email": "johnwarrel@example.com",
+        "name": "varun shukla",
+        "email": "varunshukla@example.com",
         "image": profile_img_j,
         "createdAt": "2025-10-09T13:20:24.360Z",
         "updatedAt": "2025-10-09T13:20:24.360Z"
     },
     {
         "id": "user_3",
-        "name": "Oliver Watts",
-        "email": "oliverwatts@example.com",
+        "name": "prateek singh",
+        "email": "prateeksingh@example.com",
         "image": profile_img_o,
         "createdAt": "2025-09-01T04:31:22.043Z",
         "updatedAt": "2025-09-26T09:03:37.866Z"
@@ -40,8 +40,8 @@ export const dummyUsers = [
 export const dummyWorkspaces = [
     {
         "id": "org_1",
-        "name": "Corp Workspace",
-        "slug": "corp-workspace",
+        "name": "taskify",
+        "slug": "taskify",
         "description": null,
         "settings": {},
         "ownerId": "user_3",
@@ -257,8 +257,8 @@ export const dummyWorkspaces = [
     },
     {
         "id": "org_2",
-        "name": "Cloud Ops Hub",
-        "slug": "cloud-ops-hub",
+        "name": "taskify Cloud Ops Hub",
+        "slug": "taskify Cloud-Ops-Hub",
         "description": null,
         "settings": {},
         "ownerId": "user_3",
