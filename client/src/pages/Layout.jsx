@@ -13,7 +13,7 @@ const Layout = () => {
     const { loading, workspaces } = useSelector((state) => state.workspace)
     const dispatch = useDispatch()
     const {user, isLoaded} = useUser() 
-    const {getToken} = useAuth();
+    const {getToken} = useAuth()
 
     // Initial load of theme
     useEffect(() => {

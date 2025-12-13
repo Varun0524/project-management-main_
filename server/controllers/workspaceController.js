@@ -32,7 +32,7 @@ export const getUserWorkspaces = async (req,res) => {
 export const addMember = async (req,res) => {
     try {
         const {userId} = await req.auth();
-        const {email, role, workspaceId, messaage} = req.body;
+        const {email, role, workspaceId, message} = req.body;
 
         //check if user exists
         const user = await prisma.user.findUnique({where: {email}});
