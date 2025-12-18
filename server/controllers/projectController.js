@@ -2,6 +2,7 @@ import prisma from "../configs/prisma.js";
 
 
 //create project
+
 export const createProject = async (req, res)=> {
     try {
         const {userId} = await req.auth();
@@ -52,7 +53,7 @@ export const createProject = async (req, res)=> {
 
             await prisma.projectMember.createMany({
                 data: membersToAdd.map(memberId => ({
-                    projectid: project.id,
+                    projectId: project.id,
                     userId : memberId
                 }))
             })
@@ -67,7 +68,7 @@ export const createProject = async (req, res)=> {
             }
         })
 
-        res.join({project: projectWithMembers, message: "project created successfully"})
+        res.json({project: projectWithMembers, message: "project created successfully"})
 
     } catch (error) {
         console.log(error);
@@ -75,7 +76,8 @@ export const createProject = async (req, res)=> {
     }
 }
 
-// update project
+// UPDATE PROJECT
+
 export const updateProject = async (req, res)=> {
     try {
         const { userId} = await req.auth();
@@ -103,7 +105,7 @@ export const updateProject = async (req, res)=> {
             }
         }
 
-        const project = await prisma.project.update()({
+        const project = await prisma.project.update({
             where: {id},
             data:{
                 workspaceId,
@@ -126,7 +128,8 @@ export const updateProject = async (req, res)=> {
     }
 }
 
-//add Member to Project
+//ADD MEMBER TO PROJECT
+
 export const addMember = async (req, res)=> {
     try {
         const { userId } = await req.auth();
@@ -136,7 +139,7 @@ export const addMember = async (req, res)=> {
         // check if user is project lead
         const project = await prisma.project.findUnique({
             where: {id: projectId},
-            include: {members: {include: {useer: true}}}
+            include: {members: {include: {user: true}}}
         })
 
         if(!project){
@@ -156,7 +159,7 @@ export const addMember = async (req, res)=> {
 
         const user = await prisma.user.findUnique({where: {email}});
         if(!user){
-            return res.status(404).json({ message: "useer not found" });
+            return res.status(404).json({ message: "user not found" });
         }
 
         const member = await prisma.projectMember.create({

@@ -31,6 +31,7 @@ export const createTask = async (req,res)  => {
                 priority,
                 assigneeId,
                 status,
+                type,
                 due_date: new Date(due_date)
             }
         })
@@ -121,7 +122,7 @@ export const deleteTask = async (req,res)  => {
             return res.status(403).json({message: "you dont have admin privilages for this project"});
         }
 
-        await prisma.task.deletemany()({
+        await prisma.task.deleteMany({
             where: {id: {in: tasksIds}}
         })
 
