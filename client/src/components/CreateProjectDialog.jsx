@@ -120,7 +120,7 @@ const CreateProjectDialog = ({ isDialogOpen, setIsDialogOpen }) => {
                     <div>
                         <label className="block text-sm mb-1">Project Lead</label>
                         <select value={formData.team_lead} onChange={(e) => setFormData({ ...formData, team_lead: e.target.value, team_members: e.target.value ? [...new Set([...formData.team_members, e.target.value])] : formData.team_members, })} className="w-full px-3 py-2 rounded dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 mt-1 text-zinc-900 dark:text-zinc-200 text-sm" >
-                            <option value="">No lead</option>
+                            {/* <option value="">choose lead</option> */}
                             {currentWorkspace?.members?.map((member) => (
                                 <option key={member.user.email} value={member.user.email}>
                                     {member.user.email}

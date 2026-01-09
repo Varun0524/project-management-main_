@@ -66,7 +66,7 @@ export const updateTask = async (req,res)  => {
         })
 
         if(!task){
-            return res.staus(404).json({ message: "task not found"});
+            return res.status(404).json({ message: "task not found"});
         }
         const {userId} = await req.auth();
         
