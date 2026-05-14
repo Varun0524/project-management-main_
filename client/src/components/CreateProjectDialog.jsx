@@ -88,7 +88,7 @@ const CreateProjectDialog = ({ isDialogOpen, setIsDialogOpen }) => {
                             <select value={formData.status} onChange={(e) => setFormData({ ...formData, status: e.target.value })} className="w-full px-3 py-2 rounded dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 mt-1 text-zinc-900 dark:text-zinc-200 text-sm" >
                                 <option value="PLANNING">Planning</option>
                                 <option value="ACTIVE">Active</option>
-                                <option value="COMPLETED">Completed</option>
+                                {/* <option value="COMPLETED">Completed</option> */}
                                 <option value="ON_HOLD">On Hold</option>
                                 <option value="CANCELLED">Cancelled</option>
                             </select>
