@@ -90,7 +90,7 @@ const CreateProjectDialog = ({ isDialogOpen, setIsDialogOpen }) => {
                                 <option value="ACTIVE">Active</option>
                                 {/* <option value="COMPLETED">Completed</option> */}
                                 <option value="ON_HOLD">On Hold</option>
-                                <option value="CANCELLED">Cancelled</option>
+                                {/* <option value="CANCELLED">Cancelled</option> */}
                             </select>
                         </div>
 

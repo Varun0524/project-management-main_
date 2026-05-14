@@ -100,7 +100,7 @@ export const updateProject = async (req, res)=> {
 
             if(!project){
                 return res.status(404).json({ message: "project not found"});
-            } else if(project.team_lead !== userid){
+            } else if(project.team_lead !== userId){
                 return res.status(403).json({ message:  "you dont have permission to update projects in this workspace"});
             }
         }
