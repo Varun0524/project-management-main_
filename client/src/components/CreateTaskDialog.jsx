@@ -112,7 +112,7 @@ export default function CreateTaskDialog({ showCreateTask, setShowCreateTask, pr
                             <select value={formData.status} onChange={(e) => setFormData({ ...formData, status: e.target.value })} className="w-full rounded dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 px-3 py-2 text-zinc-900 dark:text-zinc-200 text-sm mt-1" >
                                 <option value="TODO">To Do</option>
                                 <option value="IN_PROGRESS">In Progress</option>
-                                <option value="DONE">Done</option>
+                                {/* <option value="DONE">Done</option> */}
                             </select>
                         </div>
                     </div>
