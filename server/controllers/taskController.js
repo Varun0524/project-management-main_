@@ -89,7 +89,7 @@ export const updateTask = async (req,res)  => {
 
      
 
-        res.json({task: updateTask, message: "task updated successfully"})
+        res.json({task: updatedTask, message: "task updated successfully"})
 
     } catch (error) {
         console.log(error);
